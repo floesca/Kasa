@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 function Home() {
   return <h1>Page d'accueil</h1>;
@@ -19,17 +19,14 @@ function ErrorPage() {
 function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <Link to="/">Accueil</Link> |{" "}
-        <Link to="/about">A propos</Link> |{" "}
-      </nav>
-
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/property/:id" element={<Property />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
     
   )
