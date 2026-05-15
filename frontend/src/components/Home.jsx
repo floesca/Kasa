@@ -3,11 +3,13 @@ import banner from '../assets/banner.png'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
-function Banner() {
+export function Banner({image, title}) {
     return (
         <div className='home-banner'>
-            <img src={banner} alt='banner Kasa' />
-            <h1>Chez vous, partout et ailleurs</h1>
+            <img src={image} alt='banner Kasa' />
+            {title && (
+                <h1 className='title-banner'>{title}</h1>
+            )}
         </div>
     )
 }
@@ -38,7 +40,9 @@ function Home() {
 
     return (
         <div>
-            <Banner />
+            <Banner 
+                image={banner}
+                title="Chez vous, partout et ailleurs" />
 
             <div className="property-list">
                 {properties.map(prop => (
