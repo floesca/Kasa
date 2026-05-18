@@ -5,7 +5,7 @@ import arrowClosed from '../assets/arrow-closed.png'
 import arrowOpen from '../assets/arrow-open.png'
 import { useState } from 'react'
 
-function Collapse({title, content}) {
+export function Collapse({title, content}) {
 const [open, setOpen] = useState(false)
 
     return (

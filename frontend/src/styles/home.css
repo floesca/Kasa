@@ -27,10 +27,10 @@
 .property-list {
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
     gap: 20px;
     background-color: #F6F6F6;
     margin-top: 20px;
-    justify-content: space-between;
     padding: 20px;
     padding-top: 0px;
     margin-bottom: 50px;
@@ -41,7 +41,7 @@
     position: relative;
     display: block;
     overflow: hidden;
-    width: 300px;
+    width: calc(33.333% - 15px);
     height: 300px;
     text-decoration: none;
     border-radius: 16px;
