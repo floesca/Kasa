@@ -5,12 +5,7 @@ import Footer from './components/Footer'
 import Home from './components/Home'
 import About from './components/About'
 import ErrorPage from './components/ErrorPage'
-
-
-function Property() {
-  return <h1>Détail logement</h1>;
-}
-
+import Property from './components/Property'
 
 function App() {
   return (
