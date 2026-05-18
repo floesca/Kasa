@@ -1,0 +1,16 @@
+.error-message h1, h2 {
+    color: #FF6060;
+}
+
+.error-message {
+    margin-bottom: 100px;
+}
+
+.error-message h1 {
+    font-size: 288px;
+    font-weight: bold;
+}
+
+.error-message h2 {
+    margin-bottom: 80px;
+}

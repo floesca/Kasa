@@ -4,14 +4,13 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import About from './components/About'
+import ErrorPage from './components/ErrorPage'
 
 
 function Property() {
   return <h1>Détail logement</h1>;
 }
-function ErrorPage() {
-  return <h1>Page non trouvée</h1>;
-}
+
 
 function App() {
   return (
