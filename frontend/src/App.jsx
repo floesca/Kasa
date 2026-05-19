@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Home from './components/Home'
-import About from './components/About'
-import ErrorPage from './components/ErrorPage'
-import Property from './components/Property'
+import Header from './pages/header/Header'
+import Footer from './pages/footer/Footer'
+import Home from './pages/home/Home'
+import About from './pages/about/About'
+import ErrorPage from './pages/error-page/ErrorPage'
+import Property from './pages/property/Property'
 
 function App() {
   return (
