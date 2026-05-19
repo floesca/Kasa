@@ -3,22 +3,28 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Collapse } from '../../components/Collapse'
 import { Slideshow } from '../../components/Slideshow'
+import { useNavigate } from "react-router"
 
 function Property() {
     const { id } = useParams()
     const [property, setProperty] = useState(null)
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetch("http://localhost:8080/api/properties")
         .then((res) => res.json())
         .then((data) => {
             const found = data.find((item) => item.id === id)
-            setProperty(found)
+            if (!found) {
+                navigate("/errorpage")
+            } else {
+                setProperty(found)
+            }
         })
-    }, [id])
+    }, [id, navigate])
 
     if (!property) {
-    return <p>Chargement...</p>
+    return <div>Chargement...</div>
     }
   
   return (
