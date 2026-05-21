@@ -17,7 +17,8 @@ function Home() {
         <div>
             <Banner 
                 image={banner}
-                title="Chez vous, partout et ailleurs" />
+                title="Chez vous, partout et ailleurs"
+                className='banner-home' />
 
             <div className="property-list">
                 {properties.map(prop => (
