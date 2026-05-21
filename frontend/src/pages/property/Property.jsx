@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom'
 import { Collapse } from '../../components/Collapse'
 import { Slideshow } from '../../components/Slideshow'
 import { useNavigate } from "react-router"
+import starActive from '../../assets/star-active.png'
+import starInactive from '../../assets/star-inactive.png'
 
 function Property() {
     const { id } = useParams()
@@ -33,7 +35,6 @@ function Property() {
 
         <div className='properties'>
             <div className='property-header'>
-                <div className='property-title-location'></div>
                     <div className='titles'>
                         <h1>{property.title}</h1>
                     </div>
@@ -47,7 +48,7 @@ function Property() {
                         <span key={index} className="tag">{tag}</span>
                         ))}
                     </div>
-                </div>
+            </div>
 
                 <div className='host-rating'>
                     <div className="host">
@@ -56,21 +57,23 @@ function Property() {
                     </div>
 
                     <div className="rating">
-                        {"★".repeat(property.rating)}
-                        {"☆".repeat(5 - property.rating)}
+                        {[...Array(5)].map((_, index) => (
+                        <img
+                            key={index}
+                            src={index < property.rating ? starActive : starInactive}
+                            alt="star"
+                        />
+                        ))}
                     </div>
                 </div>
-            </div>
+        </div>
 
             <div className='collapse'>
-                <div className='description'>
                     <Collapse
                         title="Description"
                         content={property.description}
                     />
-                </div>
 
-                <div className='equipments'>
                     <Collapse
                         title="Equipements"
                         content={
@@ -81,9 +84,8 @@ function Property() {
                         </ul>
                         }
                     />
-                </div>
             </div>
-        </div>
+    </div>
     
   )
 }
