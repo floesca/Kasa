@@ -9,19 +9,23 @@
 }
 
 .home-banner {
+    position: relative;
     height: 223px;
     margin-bottom: 80px;
 }
 
 .title-banner {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
     color: white;
     font-size: 48px;
     z-index: 1;
-    top: 260px;
-    left: 25%;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .property-list {
@@ -65,4 +69,15 @@
     font-weight: bold;
     margin: 0;
     z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+     .property-card {
+        width: 100%;
+     }  
+
+     .title-banner {
+        white-space: wrap;
+       transform: translate(-50%, -40%);
+     }
 }

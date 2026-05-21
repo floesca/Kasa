@@ -111,3 +111,38 @@
     gap: 70px;
 }
 
+@media screen and (max-width: 768px) {
+    .collapse {
+        flex-direction: column;
+     }
+
+    .properties {
+        flex-direction: column;
+     }
+
+    .host-rating {
+        flex-direction: row;
+        align-items: center;
+     }
+
+    .property-header {
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+    }
+
+    .titles h1,
+    .location p {
+        text-align: left;
+    }
+     
+    .tag {
+        text-align: center;
+    }
+    .host-rating {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
