@@ -21,7 +21,7 @@ export function Collapse({ title, content }) {
                 <h2>{title}</h2>
                 <img 
                 src={arrowClosed} 
-                alt='toggle' 
+                alt='toggle arrow' 
                 className={open ? "arrow open" : "arrow"}
                 />
             </div>
