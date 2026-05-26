@@ -44,3 +44,18 @@
 .arrow.open {
     transform: rotate(-180deg);
 }
+
+button {
+    background: none;
+    border: none;
+}
+
+.collapse-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.collapse-wrapper.open {
+    max-height: 500px;
+}

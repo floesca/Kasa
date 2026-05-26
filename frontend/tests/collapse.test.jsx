@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 
 import { describe, it, expect } from 'vitest'
-import {render, screen} from "@testing-library/react"
+import {render, screen, within} from "@testing-library/react"
 import { Collapse } from '../src/components/Collapse'
 import userEvent from '@testing-library/user-event'
 
@@ -17,19 +17,19 @@ describe('<Collapse>', () => {
         const content = screen.getByText("Hidden Content")
         const wrapper = content.closest(".collapse-wrapper")
 
-        expect(wrapper.style.maxHeight).toBe("0px")
+        expect(wrapper.className).not.toContain("open")
     })
 
-    it('opens when clicking title', async () => {
+    it('opens when clicking arrow', async () => {
         render(<Collapse title="Title" content="Content" />)
-
-        const title = screen.getAllByText("Title")[0]
-        await userEvent.click(title)
 
         const content = screen.getByText("Content")
         const wrapper = content.closest(".collapse-wrapper")
 
-        expect(wrapper.style.maxHeight).not.toBe("0px")
+        const button = within(content.closest(".collapse-list")).getByRole("button")
+        await userEvent.click(button)
+
+        expect(wrapper.className).toContain("open")
     })
 
     it('should render content', () => {
