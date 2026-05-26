@@ -1,6 +1,5 @@
 import { Banner } from '../../components/Banner'
 import bannerAbout from '../../assets/banner-about.png'
-import './about.css'
 import { Collapse } from '../../components/Collapse'
 
 
@@ -15,7 +14,7 @@ function About() {
   return (
     <div>
         <Banner 
-            image={bannerAbout} />
+            image={bannerAbout} brightness={0.7} />
         
         <div className='collapse-container'>
         {data.map((item, index) => (

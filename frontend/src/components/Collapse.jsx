@@ -1,6 +1,6 @@
 import arrowClosed from '../assets/arrow-closed.png'
-import arrowOpen from '../assets/arrow-open.png'
 import { useState, useRef, useEffect } from 'react'
+import './collapse.css'
 
 export function Collapse({ title, content }) {
     const [open, setOpen] = useState(false)
@@ -17,12 +17,13 @@ export function Collapse({ title, content }) {
 
     return (
         <div className='collapse-list'>
-            <div className='collapse-title' onClick={() => setOpen(!open)}>
+            <div className='collapse-title' >
                 <h2>{title}</h2>
                 <img 
                 src={arrowClosed} 
                 alt='toggle arrow' 
                 className={open ? "arrow open" : "arrow"}
+                onClick={() => setOpen(!open)}
                 />
             </div>
 

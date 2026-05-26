@@ -4,7 +4,7 @@ import { describe, it, expect } from 'vitest'
 import {render, screen} from "@testing-library/react"
 import { Banner } from '../src/components/Banner'
 
-describe('<Collapse>', () => {
+describe('<Banner>', () => {
     it('should render the banner image', () => {
         render(<Banner image="/test.jpg" title="Hello" />)
 
