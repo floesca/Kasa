@@ -21,11 +21,13 @@
     color: black;
     padding: 20px;
     text-align: left;
+    display: none;
+    background-color: #F6F6F6;
 }
 
 .collapse-list {
     width: 100%;
-    background-color: #F6F6F6;
+    
 }
 
 .collapse-container {
@@ -53,9 +55,13 @@ button {
 .collapse-wrapper {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.4s ease-in-out;
 }
 
 .collapse-wrapper.open {
-    max-height: 500px;
+    max-height: 300px;
+}
+
+.collapse-wrapper.open .collapse-content {
+    display: block;
 }

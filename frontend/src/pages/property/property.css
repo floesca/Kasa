@@ -146,4 +146,7 @@
         justify-content: space-between;
         align-items: center;
     }
+    .slide-counter {
+        display: none;
+    }
 }
