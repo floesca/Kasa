@@ -1,7 +1,7 @@
 import './property.css'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { Collapse } from '../../components/Collapse'
+import { Collapse } from '../../components/collapse/Collapse'
 import { Slideshow } from '../../components/Slideshow'
 import { useNavigate } from "react-router"
 import starActive from '../../assets/star-active.png'

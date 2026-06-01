@@ -1,7 +1,7 @@
 import './home.css'
 import banner from '../../assets/banner.png'
 import { useState, useEffect } from 'react'
-import { Banner } from '../../components/Banner'
+import { Banner } from '../../components/banner/Banner'
 import { PropertyCard } from '../../components/PropertyCard'
 
 function Home() {

@@ -1,4 +1,4 @@
-import arrowClosed from '../assets/arrow-closed.png'
+import arrowClosed from '../../assets/arrow-closed.png'
 import { useState } from 'react'
 import './collapse.css'
 
