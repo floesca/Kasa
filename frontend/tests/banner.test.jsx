@@ -2,7 +2,7 @@
 
 import { describe, it, expect } from 'vitest'
 import {render, screen} from "@testing-library/react"
-import { Banner } from '../src/components/Banner'
+import { Banner } from '../src/components/banner/Banner'
 
 describe('<Banner>', () => {
     it('should render the banner image', () => {
