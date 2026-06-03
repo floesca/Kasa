@@ -126,10 +126,27 @@
         align-items: center;
      }
 
+    .host p {
+        font-size: 12px;
+    } 
+
+    .host img {
+        height: 32px;
+        width: 32px;
+    }
+
     .property-header {
         align-items: flex-start;
         text-align: left;
         width: 100%;
+    }
+
+    .titles h1 {
+        font-size: 18px;
+    }
+
+    .location p {
+        font-size: 14px;
     }
 
     .titles h1,
@@ -139,6 +156,8 @@
      
     .tag {
         text-align: center;
+        font-size: 10px;
+        width: 84px;
     }
     .host-rating {
         width: 100%;
@@ -146,7 +165,27 @@
         justify-content: space-between;
         align-items: center;
     }
+    .rating img {
+        height: 20px;
+    }
     .slide-counter {
         display: none;
+    }
+
+    .collapse-title h2 {
+        font-size: 13px;
+    }
+
+    .arrow-back, .arrow-forward {
+        height: 20px;
+        top: 40%;
+    }
+
+    .slideshow-pictures {
+        height: 255px;
+    }
+
+    .tags {
+        flex-wrap: wrap;
     }
 }

@@ -65,3 +65,13 @@ button {
 .collapse-wrapper.open .collapse-content {
     display: block;
 }
+
+@media screen and (max-width: 768px) {
+    .collapse-container {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .arrow {
+        height: 20px;
+    }
+}

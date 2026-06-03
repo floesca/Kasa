@@ -35,3 +35,17 @@
     border-radius: 16px;
     box-shadow: 0px 4px 5px rgba(0,0,0,0.2);
 }
+
+
+@media screen and (max-width: 768px) {
+    .title-banner {
+         white-space: normal;
+        font-size: 24px;
+        
+        transform: translate(-50%, -50%);
+        text-align: left;
+     }
+     .home-banner {
+        height: 111px
+     }
+}

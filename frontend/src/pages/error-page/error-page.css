@@ -14,3 +14,15 @@
 .error-message h2 {
     margin-bottom: 80px;
 }
+
+@media screen and (max-width: 768px) {
+    .error-message h1 {
+        font-size: 96px;
+    }
+    .error-message h2 {
+        font-size: 18px;
+    }
+    .error-message p {
+        font-size: 14px;
+    }
+}
