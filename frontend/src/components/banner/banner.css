@@ -39,13 +39,18 @@
 
 @media screen and (max-width: 768px) {
     .title-banner {
-         white-space: normal;
+        white-space: normal;
         font-size: 24px;
-        
-        transform: translate(-50%, -50%);
+        left: 40%;
+        transform: translate(-50%, -100%);
         text-align: left;
-     }
-     .home-banner {
-        height: 111px
-     }
+    }
+    .home-banner {
+        height: 111px;
+        margin-bottom: 30px;
+    }
+    .home-banner img {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 }

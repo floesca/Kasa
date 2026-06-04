@@ -1,5 +1,5 @@
 .collapse-title {
-    height: 20px;
+    height: 50px;
     background-color: #FF6060;
     border-radius: 5px;
     display: flex;
@@ -21,13 +21,13 @@
     color: black;
     padding: 20px;
     text-align: left;
-    display: none;
+    visibility: hidden;
+    transition: visibility 0.4s ease-in-out;
     background-color: #F6F6F6;
 }
 
 .collapse-list {
     width: 100%;
-    
 }
 
 .collapse-container {
@@ -41,6 +41,7 @@
 
 .arrow {
     transition: transform 0.3s ease;
+    margin: 0px;
 }
 
 .arrow.open {
@@ -62,8 +63,12 @@ button {
     max-height: 300px;
 }
 
+.collapse-toggle {
+    height: 40px;
+}
+
 .collapse-wrapper.open .collapse-content {
-    display: block;
+    visibility: visible;
 }
 
 @media screen and (max-width: 768px) {
@@ -72,6 +77,12 @@ button {
         margin-bottom: 20px;
     }
     .arrow {
+        height: 20px;
+    }
+    .collapse-content {
+        font-size: 12px;
+    }
+    .collapse-title {
         height: 20px;
     }
 }

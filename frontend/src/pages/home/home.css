@@ -54,5 +54,11 @@
 
      .property-list {
         width: 100%;
+        background: none;
+        margin: 0px;
+        padding: 0px;
+     }
+     .property-image {
+        margin-top: 0px;
      }
 }

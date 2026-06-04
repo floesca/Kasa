@@ -28,4 +28,8 @@ nav {
     nav {
         gap: 20px;
     }
+    .link-nav-header {
+        text-transform: uppercase;
+        font-size: 12px;
+    }
 }
